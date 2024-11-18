@@ -3,7 +3,7 @@ import { db, auth } from '../firebase';
 import { collection, getDocs, updateDoc, doc, addDoc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import './Estoque.css';
-import qrCodeImage from '../images/image-QR-Code-pagamento.png';
+import qrCodeImage from '../images/imagem-pagamento.jpeg';
 
 export const Estoque = () => {
     const [produtos, setProdutos] = useState([]);
@@ -348,11 +348,11 @@ export const Estoque = () => {
                 <div className="qr-code-container">
                     <div>
                         <p>Escaneie o código para pagar</p>
-                        <img src={qrCodeImage} alt="QR Code para pagamento" />
+                        <img src={qrCodeImage} alt="QR Code para pagamento" width={300} />
                         <br />
                         {/* <button style={{ textAlign: 'center', width: '100%', marginTop: '10px' }} onClick={handlePaymentCompleted}>Confirmar Pagamento</button> */}
                         <button style={{ textAlign: 'center', width: '100%', marginTop: '10px' }} onClick={handleConfirmarPagamento} disabled={isLoading}>
-                            Confirmar Pagamento 02
+                            Confirmar Pagamento
                         </button>
 
                     </div>
